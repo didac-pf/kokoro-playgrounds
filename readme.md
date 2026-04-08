@@ -66,4 +66,4 @@ Playgrounds are developed on **Linux (Debian-based)**; other OS setups should be
 ---
 
 > **Note:** Want to add your own playground? Pull requests are welcome.
-Please ensure your playground follows the same [Usage](Usage) defined above.
+Please ensure your playground follows the same [Usage](#usage) defined above.
