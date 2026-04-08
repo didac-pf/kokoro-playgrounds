@@ -1,0 +1,13 @@
+name: course-python
+
+services:
+  app-dev:
+    build:
+      context: ./project
+      dockerfile: docker/Dockerfile.dev
+    working_dir: /app
+    volumes:
+      - ./project:/app
+    init: true # To properly send SIGTERM to the container on Ctrl+C
+    # command: bash watch.sh # I used this at some point but can't remember why
+    command: watchfiles "python src/main.py" src

@@ -1,0 +1,1 @@
+- Add, load and display envvars in python playground

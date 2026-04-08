@@ -1,0 +1,12 @@
+FROM python:3.14-slim
+
+WORKDIR /app
+
+# COPY ../app/requirements.txt .
+
+RUN pip install watchfiles
+# RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD ["python", "src/main.py"]

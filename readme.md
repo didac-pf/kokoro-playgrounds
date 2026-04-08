@@ -41,6 +41,7 @@ These work well for learning a language or framework, or for sketching an idea.
 | Deno       | `deno/`   |
 | Bun        | `bun/`    |
 | Rust       | `rust/`   |
+| Python     | `python/` |
 
 > More may land here over time.
 
