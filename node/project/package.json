@@ -1,0 +1,21 @@
+{
+  "version": "0.0.1",
+  "name": "node-playground",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": "^24"
+  },
+  "scripts": {
+    "build": "echo '@todo'",
+    "start": "node dist/index.js",
+    "dev": "node src/index.ts",
+    "dev:watch": "node --watch src/index.ts",
+    "dev:debug": "node --watch --inspect-wait=0.0.0.0:9229 src/index.ts"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^24"
+  }
+}

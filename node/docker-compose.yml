@@ -1,0 +1,32 @@
+services:
+  app-dev:
+    build:
+      context: ./project
+      dockerfile: docker/Dockerfile.dev
+    ports:
+      - 3000:3000
+      - 9229:9229
+    volumes:
+      - ./project:/app
+      - /app/node_modules
+        # Note: Use the following commands to copy dependencies from the container to the host
+        #   - $ rm -rf ./project/node_modules
+        #   - $ sudo docker compose cp app-dev:/app/node_modules ./project/node_modules
+        #   - $ sudo docker compose cp app-dev:/app/package.json ./project/package.json
+        #   - $ sudo docker compose cp app-dev:/app/package-lock.json ./project/package-lock.json
+        #   - $ sudo chown -R $(id -u):$(id -g) ./project/node_modules
+        #   - $ sudo chmod -R $(id -u):$(id -g) ./project/package.json
+        #   - $ sudo chmod -R $(id -u):$(id -g) ./project/package-lock.json
+    env_file:
+      - env/.env.development
+    command: npm run dev:watch
+    # command: npm run dev:debug
+
+  app-prod:
+    build:
+      context: ./project
+      dockerfile: docker/Dockerfile
+    ports:
+      - 80:3000
+    env_file:
+      - env/.env.production

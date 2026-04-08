@@ -1,0 +1,6 @@
+Recomendable tener 2 terminales:
+En una, ejecutar
+  $ deno task start:dev:watch
+
+En la otra, ejecutar
+  $ deno task test:watch

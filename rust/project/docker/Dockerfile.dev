@@ -1,0 +1,11 @@
+FROM rust:1.94.1
+
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends entr
+RUN rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["cargo", "run", "--release"]

@@ -1,0 +1,10 @@
+Requires deno extension - Deno (denoland.vscode-deno)
+It's not ready yet as an empty but runnable template.
+
+Since I want to run Deno inside a container, I don't want to have an executable in the host machine. Therefore, the types are not working. (example: process.env or Deno.env.get())
+
+The debugger works but not good. It uses standard node attach integration, which doesn't work well for Deno.
+Needs a deep review
+
+I've included the old playground into project-legacy/
+It includes some example tests which can be ported as examples into the real playground

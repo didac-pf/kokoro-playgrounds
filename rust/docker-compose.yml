@@ -1,0 +1,13 @@
+services:
+  app-dev:
+    build:
+      context: ./project
+      dockerfile: docker/Dockerfile.dev
+    volumes:
+      - ./project:/app
+      # - /app/target # Not needed because the target directory is managed by env_file
+    working_dir: /app
+    init: true # To properly send SIGTERM to the container on Ctrl+C
+    env_file:
+      - env/.env.development
+    command: ["/bin/sh", "-c", "{ find src -name '*.rs' -print; echo Cargo.toml; } | entr -n -r cargo run"]

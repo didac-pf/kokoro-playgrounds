@@ -1,0 +1,2 @@
+El entorno actual permite iteración rápida a la hora de añadir código:
+  $ docker compose up app-dev

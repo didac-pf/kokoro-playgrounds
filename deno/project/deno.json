@@ -1,0 +1,22 @@
+{
+  "version": "0.0.1",
+  "name": "deno-playground",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "deno": "^2.7"
+  },
+  "tasks": {
+    "build": "echo '@todo'",
+    "start": "deno src/index.ts",
+    "dev": "deno --allow-read --allow-env --allow-net src/index.ts",
+    "dev:watch": "deno --watch --allow-read --allow-env --allow-net src/index.ts",
+    "dev:debug": "deno --watch --allow-read --allow-env --allow-net --inspect-wait=0.0.0.0:9229 src/index.ts"
+  },
+  "imports": {
+    "@std/uuid": "jsr:@std/uuid@^1.1.0"
+  }
+}

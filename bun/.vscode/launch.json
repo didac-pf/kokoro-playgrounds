@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "bun", // Requires Bun extension
+      "request": "attach",
+      "name": "Bun (attach to Docker)",
+      "url": "ws://127.0.0.1:9229/debug",
+      "localRoot": "${workspaceFolder}/project",
+      "remoteRoot": "/app"
+    }
+  ]
+}
